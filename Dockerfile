@@ -29,9 +29,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-RUN export NVM_DIR="$HOME/.nvm"
-RUN [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
-RUN [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+RUN source ~/.profile
 RUN nvm i 14
 
 # Copy files: 
