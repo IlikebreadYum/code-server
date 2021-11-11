@@ -28,6 +28,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
+RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+RUN nvm i 14
 
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
